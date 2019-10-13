@@ -15,23 +15,23 @@ document.addEventListener('click', (event) => {
   
   if (event.target.closest('.btn--add')) {
     event.preventDefault();
-    $counter.innerHTML = incrementCounter(parseInt($counter.innerHTML));
+    $counter.innerHTML = changeCounter("increment", parseInt($counter.innerHTML));
   }
 
   if (event.target.closest('.btn--subtract')) {
     event.preventDefault();
-    $counter.innerHTML = decrementCounter($counter.innerHTML);
+    $counter.innerHTML = changeCounter("decrement", parseInt($counter.innerHTML));
   }
 
   return false;
 }, false)
 
-const incrementCounter = currentVal => {
-  return ++currentVal;
-}
+const changeCounter = (job, currentVal) => {
+  if (job === "increment") {
+    return ++currentVal;
+  }
 
-const decrementCounter = currentVal => {
-  if (currentVal > 0) {
+  if (job === "decrement" && currentVal > 0) {
     return --currentVal;
   }
 

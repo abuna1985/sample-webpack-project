@@ -2,10 +2,10 @@
   "name": "webpack-sample-project",
   "version": "1.0.0",
   "description": "Learning all about webpack 4",
-  "main": "index.js",
+  "private": true,
   "scripts": {
     "build": "webpack",
-    "start:dev": "webpack-dev-server"
+    "serve": "webpack-dev-server --open"
   },
   "keywords": [
     "webpack",

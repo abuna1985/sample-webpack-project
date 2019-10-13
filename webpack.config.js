@@ -1,5 +1,7 @@
 const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 const UglifyJSPlugin = require("uglifyjs-webpack-plugin");
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   entry: "./src/index.js",
@@ -10,6 +12,12 @@ module.exports = {
   optimization: {
     minimizer: [new UglifyJSPlugin()]
   },
+  plugins: [
+    new CleanWebpackPlugin(),
+    new HtmlWebpackPlugin({
+      template: 'src/index.html'
+    })
+  ],
   devServer: {
     contentBase: path.join(__dirname, "dist"),
     port: 9000
