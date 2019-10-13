@@ -4,7 +4,8 @@
   "description": "Learning all about webpack 4",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack",
+    "watch": "webpack -w"
   },
   "keywords": [
     "webpack",
@@ -13,10 +14,18 @@
   "author": "Adam Abundis",
   "license": "MIT",
   "devDependencies": {
+    "@babel/core": "^7.6.4",
+    "@babel/preset-env": "^7.6.3",
+    "@fortawesome/fontawesome-svg-core": "^1.2.25",
+    "@fortawesome/free-solid-svg-icons": "^5.11.2",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.2.0",
+    "style-loader": "^1.0.0",
+    "url-loader": "^2.2.0",
     "webpack": "^4.28.4",
     "webpack-cli": "^3.2.1"
   },
   "dependencies": {
-    "jquery": "^3.4.1"
+    "normalize.css": "^8.0.1"
   }
 }
