@@ -4,6 +4,10 @@
 
 I built a Webpack configuration around a counter application written in ES6 JavaScript. I used the default /src directory and implemented Webpack to take all the HTML, CSS, and JavaScript to the default /dist directory. I also implemented the clean-webpack-plugin to remove unused files in the /dist directory and uglyfyjs-webpack-plugin to optimize the JavaScript build.
 
+## Demo
+
+You can find a demo of the sample counter app [here](https://abuna1985.github.io/sample-webpack-project/)
+
 ## Prerequisites
 
 Please make sure you have Node.js installed. You can find the link to download Node.js [here](https://nodejs.org/en/)
